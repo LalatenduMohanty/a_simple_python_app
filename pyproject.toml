@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "simple_app"
+version = "0.1.0"
+description = "A simple Python application demonstrating Hatchling usage"
+readme = "README.md"
+requires-python = ">=3.6"
+license = "MIT"
+authors = [
+    { name = "Your Name", email = "your.email@example.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/yourusername/simple_app"
+Repository = "https://github.com/yourusername/simple_app.git"
+
+[project.scripts]
+simple-app = "simple_app.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["simple_app"] 
